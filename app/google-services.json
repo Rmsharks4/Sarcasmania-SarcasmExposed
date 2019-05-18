@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "187082752621",
+    "firebase_url": "https://sarcasmania-767ac.firebaseio.com",
+    "project_id": "sarcasmania-767ac",
+    "storage_bucket": "sarcasmania-767ac.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:187082752621:android:e0c558d50726ae01",
+        "android_client_info": {
+          "package_name": "com.fyp.sarcasmania.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "187082752621-u06lcvbjnmmbdhok6fh3cosuuj1mnq73.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fyp.sarcasmania.app",
+            "certificate_hash": "3a343cae58a46582dcbf862608567d1c8a0b47f3"
+          }
+        },
+        {
+          "client_id": "187082752621-pgsvm7fpdft7nv1s6hp2adjoarlkn1dj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCr0AMvCWuDpGAhqWyHeXddfquLHEJlf0c"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "187082752621-pgsvm7fpdft7nv1s6hp2adjoarlkn1dj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
