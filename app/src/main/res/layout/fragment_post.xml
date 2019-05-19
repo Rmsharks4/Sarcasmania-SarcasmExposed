@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.fyp.sarcasmania.app.Fragment.PostFragment"
+    android:padding="20dp">
+
+    <!-- TODO: Update blank fragment layout -->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:background="@drawable/border"
+                android:weightSum="5">
+
+                <TextView
+                    android:id="@+id/postUsername"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_weight="1"
+                    android:padding="12sp"
+                    android:textColor="@color/statusBarColor"
+                    android:textSize="22dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+
+            <EditText
+                android:id="@+id/post_text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="Can you BE more sarcastic?!!"
+                android:textColor="@color/statusBarColor"
+                android:textSize="20sp"
+                android:maxLength ="250"
+                android:scrollHorizontally="false"
+                android:lines="9"
+                android:minLines="8"
+                android:gravity="top|left"
+                android:maxLines="10"
+                android:scrollbars="none"
+                android:inputType="textMultiLine|textCapSentences"/>
+
+            <Button
+                android:id="@+id/post_submit"
+                style="@style/Widget.AppCompat.Button.Small"
+                android:layout_width="200dp"
+                android:layout_height="40sp"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                android:background="@drawable/rounded_edges"
+                android:text="Post"
+                android:textAlignment="center"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display2"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+
+        </LinearLayout>
+
+
+    </android.support.constraint.ConstraintLayout>
+
+</FrameLayout>
