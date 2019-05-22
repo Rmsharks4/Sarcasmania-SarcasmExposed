@@ -9,6 +9,9 @@
         android:supportsRtl="true"
         android:largeHeap="true"
         android:theme="@style/AppTheme">
+        <meta-data
+            android:name="com.google.android.gms.ads.APPLICATION_ID"
+            android:value="ca-app-pub-1500982172589230~9004985923"/>
         <activity android:name="com.fyp.sarcasmania.app.Activities.splashSreen">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

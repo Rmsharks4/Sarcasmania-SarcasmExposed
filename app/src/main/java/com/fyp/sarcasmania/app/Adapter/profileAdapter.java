@@ -5,6 +5,7 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.support.annotation.NonNull;
@@ -51,6 +52,7 @@ public class profileAdapter extends RecyclerView.Adapter<profileAdapter.ViewHold
         this.context = context;
         List2 = list;
         this.check = check;
+
     }
 
     public profileAdapter(Context context, ArrayList<Post> list, int check) {
@@ -62,6 +64,7 @@ public class profileAdapter extends RecyclerView.Adapter<profileAdapter.ViewHold
     @NonNull
     @Override
     public ViewHolder onCreateViewHolder(@NonNull ViewGroup viewGroup, int i) {
+
         View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.profileitem, viewGroup, false);
         ViewHolder holder = new ViewHolder(v);
         v.setOnLongClickListener(new View.OnLongClickListener() {
@@ -94,6 +97,9 @@ public class profileAdapter extends RecyclerView.Adapter<profileAdapter.ViewHold
     public void onBindViewHolder(@NonNull ViewHolder viewHolder, int i) {
         TextView tweet = viewHolder.textView;
         TextView times = viewHolder.textView2;
+
+        Bitmap cross = BitmapFactory.decodeResource(context.getResources(), R.drawable.redcross);
+        Bitmap tick = BitmapFactory.decodeResource(context.getResources(), R.drawable.yellowcheck);
 
         if(check == 2) {
             report report = List2.get(i);
@@ -135,18 +141,14 @@ public class profileAdapter extends RecyclerView.Adapter<profileAdapter.ViewHold
                                         int humorValue = postt.getHumor();
                                         int insultValue = postt.getInsult();
 
-                                        ImageView humor = dialog.findViewById(R.id.imageView8);
-                                        ImageView insult = dialog.findViewById(R.id.imageView5);
+                                        ImageView humor = dialog.findViewById(R.id.imageView4);
+                                        ImageView insult = dialog.findViewById(R.id.imageView3);
 
-                                        Drawable drawable = context.getDrawable(R.mipmap.heart_grey);
-                                        Bitmap heartGrey = ((BitmapDrawable) drawable).getBitmap();
-                                        Drawable drawable2 = context.getDrawable(R.mipmap.heart_purple);
-                                        Bitmap heartPurple = ((BitmapDrawable) drawable2).getBitmap();
+                                        Bitmap heartGrey = cross;
+                                        Bitmap heartPurple = tick;
 
-                                        Drawable drawable1 = context.getDrawable(R.mipmap.unheart_grey);
-                                        Bitmap unheartGrey = ((BitmapDrawable) drawable1).getBitmap();
-                                        Drawable drawable3 = context.getDrawable(R.mipmap.unheart_purple);
-                                        Bitmap unheartPurple = ((BitmapDrawable) drawable3).getBitmap();
+                                        Bitmap unheartGrey = cross;
+                                        Bitmap unheartPurple = tick;
 
                                         if (humorValue == 0) {
                                             humor.setImageBitmap(heartGrey);
